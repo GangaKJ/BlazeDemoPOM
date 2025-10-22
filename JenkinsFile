@@ -1,5 +1,5 @@
-D:\SeleniumWorkspace\S12BlazedemoPOM
-ipeline {
+
+Pipeline {
     agent any
     stages {
         stage('Build') {
