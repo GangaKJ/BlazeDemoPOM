@@ -1,0 +1,28 @@
+D:\SeleniumWorkspace\S12BlazedemoPOM
+ipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running TestNG tests...'
+                bat '''
+                 cd D:\SeleniumWorkspace\S12BlazedemoPOM
+                 mvn test
+                '''                  
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
