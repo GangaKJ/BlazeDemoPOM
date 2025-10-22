@@ -10,10 +10,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running TestNG tests...'
-                bat '''
-                 cd D:\\SeleniumWorkspace\\S12BlazedemoPOM
-                 mvn test
-                '''                  
+                
+                // Use dir() instead of cd
+                dir('D:/SeleniumWorkspace/S12BlazedemoPOM') {
+                    bat 'mvn test'
+                }
             }
         }
     }
@@ -26,3 +27,4 @@ pipeline {
         }
     }
 }
+   
