@@ -11,7 +11,7 @@ Pipeline {
             steps {
                 echo 'Running TestNG tests...'
                 bat '''
-                 cd D:\SeleniumWorkspace\S12BlazedemoPOM
+                 cd D:\\SeleniumWorkspace\\S12BlazedemoPOM
                  mvn test
                 '''                  
             }
